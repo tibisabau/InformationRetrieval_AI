@@ -1,2 +1,4 @@
 python-terrier==0.12.1
 pandas
+requests
+torch
