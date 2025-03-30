@@ -1,7 +1,8 @@
 import requests
 import re
 
-API_KEY = "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"
+# API_KEY = "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"
+API_KEY = "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"
 API_URL_MISTRAL = "https://api-inference.huggingface.co/models/mistralai/Mistral-7B-Instruct-v0.3"
 API_URL_GOOGLE = "https://api-inference.huggingface.co/models/google/flan-t5-small"
 headers = {"Authorization": f"Bearer {API_KEY}"}
@@ -13,9 +14,9 @@ with open("prompt.txt", "r", encoding="utf-8") as file:
 def query_model(text, api_url):
     payload = {"inputs": text}
     response = requests.post(api_url, headers=headers, json=payload)
-    # print(response)
+    print(response)
     result = response.json()
-    # print(result)
+    print(result)
     # Extract generated text
     generated_text = result[0]["generated_text"] if isinstance(result, list) and "generated_text" in result[0] else ""
 
