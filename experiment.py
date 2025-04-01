@@ -31,6 +31,10 @@ get_MAP("responses_ibm.txt")
 get_MAP("responses_mistral.txt")
 get_MAP("responses_google.txt")
 
+print("MAP Scores:")
+for model, score in scores.items():
+    print(f"{model}: {score}")
+
 labels = ["Original", "IBM", "Mistral", "Google"]
 map_scores = list(scores.values())
 
