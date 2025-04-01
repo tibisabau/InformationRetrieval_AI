@@ -4,18 +4,26 @@ import pyterrier as pt
 import pandas as pd
 import re
 import subprocess
+import os 
+
 
 DATASET = pt.datasets.get_dataset("irds:antique/test/non-offensive")
 topics = DATASET.get_topics()
 original_topics = topics.copy()
 scores = {}
+venv_python = os.path.join("venv", "Scripts", "python.exe") # Windows venv
 
 with open("queries.txt", "w", encoding="utf-8") as file:
     for qid, query in topics.head(50).iterrows():
         file.write(f"{query['query']}\n")
 
-subprocess.run(["python", "models_api.py"])
-subprocess.run(["python", "models_pipeline.py"])
+## If using venv
+subprocess.run([venv_python, "models_api.py"])
+subprocess.run([venv_python, "models_pipeline.py"])
+
+## If using machine python exe
+# subprocess.run(["python", "models_api.py"])
+# subprocess.run(["python", "models_pipeline.py"])
 
 def get_MAP(file):
     with open(file, "r", encoding="utf-8") as file:
