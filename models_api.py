@@ -1,8 +1,7 @@
 import requests
 import re
 
-API_KEY = "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" # Tibi's API key
-# API_KEY = "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" # Kevin's API key
+API_KEY = "" 
 API_URL_MISTRAL = "https://api-inference.huggingface.co/models/mistralai/Mistral-7B-Instruct-v0.3" # type = chat model
 API_URL_GOOGLE = "https://api-inference.huggingface.co/models/google/gemma-3-27b-it" # type = pretrained
 headers = {"Authorization": f"Bearer {API_KEY}"}
