@@ -28,7 +28,7 @@ subprocess.run([venv_python, "models_pipeline.py"])
 def get_MAP(file):
     with open(file, "r", encoding="utf-8") as file:
         rewritten_queries = [re.sub(r'[^a-zA-Z0-9\s]', '', line.strip()) for line in file.readlines()]
-    topics.loc["query"] = rewritten_queries
+    topics["query"] = rewritten_queries
     # print("Modified Topics" +  file  + "MAP Score:", evaluate(topics))
     scores[file] = evaluate(topics)
 

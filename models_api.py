@@ -2,8 +2,8 @@ import requests
 import re
 
 API_KEY = "" 
-API_URL_MISTRAL = "https://api-inference.huggingface.co/models/mistralai/Mistral-7B-Instruct-v0.3" # type = chat model
-API_URL_GOOGLE = "https://api-inference.huggingface.co/models/google/gemma-3-27b-it" # type = pretrained
+API_URL_MISTRAL = "https://api-inference.huggingface.co/models/mistralai/Mistral-7B-Instruct-v0.3"
+API_URL_GOOGLE = "https://api-inference.huggingface.co/models/google/gemma-3-27b-it" 
 headers = {"Authorization": f"Bearer {API_KEY}"}
 
 # Read the prompt from a file
