@@ -14,7 +14,7 @@ scores = {}
 venv_python = os.path.join("venv", "Scripts", "python.exe") # Windows venv
 
 with open("queries.txt", "w", encoding="utf-8") as file:
-    for qid, query in topics.head(50).iterrows():
+    for qid, query in topics.iterrows():
         file.write(f"{query['query']}\n")
 
 ## If using venv
