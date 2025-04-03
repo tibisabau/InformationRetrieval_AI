@@ -1,6 +1,7 @@
 import requests
 import re
 from dotenv import load_dotenv
+import os
 
 load_dotenv()
 API_KEY = os.getenv("HUGGING_FACE_API_KEY")
