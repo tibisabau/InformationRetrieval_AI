@@ -1,7 +1,9 @@
 import requests
 import re
+from dotenv import load_dotenv
 
-API_KEY = "" 
+load_dotenv()
+API_KEY = os.getenv("HUGGING_FACE_API_KEY")
 API_URL_MISTRAL = "https://api-inference.huggingface.co/models/mistralai/Mistral-7B-Instruct-v0.3"
 API_URL_GOOGLE = "https://api-inference.huggingface.co/models/google/gemma-3-27b-it" 
 headers = {"Authorization": f"Bearer {API_KEY}"}

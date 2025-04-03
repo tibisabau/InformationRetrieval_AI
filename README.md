@@ -20,10 +20,10 @@ Some models are hosted via Hugging Face Inference API, so a Hugging Face access 
 - Click on the **+ Create a new token** button.
 - Select the **Fine-grained** token type, and check the box **Make calls to Inference Providers**.
 - Create the token.
-- Go to `model_api.py`, and replace the placeholder with your token:
+- Go to `.env`, and replace the placeholder with your token:
 
 ```
-API_KEY = <HUGGING_FACE_ACCESS_TOKEN>
+HUGGING_FACE_API_KEY=HUGGING_FACE_ASSESS_TOKEN
 ```
 
 ## How to Run the Code
